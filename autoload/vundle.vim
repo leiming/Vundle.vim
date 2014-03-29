@@ -8,8 +8,8 @@
 com! -nargs=+  -bar   Plugin
 \ call vundle#config#plugin(<args>)
 
-com! -nargs=0 PluginInit
-\ call vundle#config#plugin_init()
+com! -nargs=0 ActivatePlugins
+\ call vundle#config#activate_all_plugins()
 
 com! -nargs=? -bang -complete=custom,vundle#scripts#complete PluginInstall
 \ call vundle#installer#new('!' == '<bang>', <q-args>)
