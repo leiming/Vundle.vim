@@ -30,7 +30,7 @@ func! s:process(bang, cmd)
     endif
 
     if 'updated' == g:vundle_last_status && empty(msg)
-      let msg = 'plugins updated; press u to view changelog'
+      let msg = 'Plugins updated; press u to view changelog'
     endif
 
     " goto next one
