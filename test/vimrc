@@ -53,6 +53,8 @@ Bundle 'rstacruz/sparkup.git', {'rtp': 'vim/'}
 Bundle 'matchit.zip', {'name': 'matchit'}
 Plugin 'joonty/vim-sauce', {'bundle_dir' : '~/.vim/custom_bundle/'}
 
+UnPlug 'molokai' "make molokai invalid
+
 " Camel case
 Bundle 'vim-scripts/RubySinatra'
 

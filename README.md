@@ -64,6 +64,9 @@
    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
    " Pass the path to set the plugin's runtimepath dir.
    Plugin 'joonty/vim-sauce', {'bundle_dir' : '~/plugin_dir/'}
+   Plugin 'tpope/vim-fugitive'
+   " Invalid a Plugin
+   Unplug 'tpope/vim-fugitive'
    " scripts from http://vim-scripts.org/vim/scripts.html
    Plugin 'L9'
    Plugin 'FuzzyFinder'
