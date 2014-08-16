@@ -224,7 +224,7 @@ func! s:sync(bang, bundle) abort
     if !(a:bang) | return 'todate' | endif
     let cmd = 'cd '.vundle#installer#shellesc(a:bundle.path()).' && git pull && git submodule update --init --recursive'
 
-    let cmd = g:shellesc_cd(cmd)
+    let cmd = vundle#installer#shellesc_cd(cmd)
 
     let get_current_sha = 'cd '.vundle#installer#shellesc(a:bundle.path()).' && git rev-parse HEAD'
     let get_current_sha = g:shellesc_cd(get_current_sha)
@@ -265,7 +265,7 @@ func! vundle#installer#shellesc(cmd) abort
   return shellescape(a:cmd)
 endf
 
-func! g:shellesc_cd(cmd) abort
+func! vundle#installer#shellesc_cd(cmd) abort
   if ((has('win32') || has('win64')) && empty(matchstr(&shell, 'sh')))
     let cmd = substitute(a:cmd, '^cd ','cd /d ','')  " add /d switch to change drives
     return cmd
